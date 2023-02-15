@@ -1,11 +1,11 @@
 from rest_framework import serializers
-from .models import Comment
+from .models import Car
 
 # <<<<<<<<<<<<<<<<< EXAMPLE FOR STARTER CODE USE <<<<<<<<<<<<<<<<<
 
 
-class CommentSerializer(serializers.ModelSerializer):
+class CarSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Comment
-        fields = ['user', 'video_id', 'text', 'likes', 'dislikes']
+        model = Car
+        fields = ['id', 'make', 'model', 'year', 'user_id']
         depth = 1
