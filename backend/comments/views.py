@@ -15,6 +15,14 @@ def get_all_comments(request):
     serializer = CommentSerializer(comments, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_all_comments(request):
+    comments= Comment.objects.all()
+    serializer = CommentSerializer(comments, many=True)
+    return Response(serializer.data, status= status.HTTP_200_OK)
+
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def user_comment(request):
