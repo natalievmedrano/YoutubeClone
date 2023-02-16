@@ -27,11 +27,9 @@ def add_comment(request):
 
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
-def get_comment_by_id(request, pk):
-    if request.method == 'PUT':
-        comment = get_object_or_404(Comment, pk=pk)
-        serializer = CommentSerializer(comment, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save(comment=request.data)
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+def update_comment(request,comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    serializer = CommentSerializer(comment, data=request.data)
+    serializer.is_valid(raise_exception=True)
+    serializer.save()
+    return Response(serializer.data)
