@@ -10,18 +10,15 @@ from replies.models import Reply
 
 
 
-@api_view(['GET'])
-@permission_classes([AllowAny])
-def get_all_replies(request):
-    if request.method == 'GET':
-        replies = Reply.objects.all()
+@api_view(['GET','POST'])
+@permission_classes([IsAuthenticated])
+def replies_table(request,comment_id):     
+    if request.method == 'GET':             
+        replies = Reply.objects.filter(comment_id=comment_id)
         serializer = ReplySerializer(replies, many=True)
         return Response(serializer.data)
-
-@api_view(['POST'])
-@permission_classes([IsAuthenticated])
-def user_replies(request):
+    elif request.method == 'POST':
         serializer = ReplySerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(user=request.user)
+        serializer.save(user=request.user , comment_id= comment_id)
         return Response(serializer.data, status=status.HTTP_201_CREATED)

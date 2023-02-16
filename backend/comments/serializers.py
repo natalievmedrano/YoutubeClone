@@ -7,5 +7,9 @@ from .models import Comment
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ['user', 'video_id', 'text', 'likes', 'dislikes','id']
+        fields = ['username', 'video_id', 'text', 'likes', 'dislikes','id']
         depth = 1
+
+    username= serializers.SerializerMethodField()
+    def get_username(self,comment):
+        return comment.user.username
