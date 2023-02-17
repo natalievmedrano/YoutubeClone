@@ -34,6 +34,16 @@ function App() {
 
   async function updateComment(){
     let response = await axios.put('http://127.0.0.1:8000/api/comments/1/')
+    console.log(response.data)
+  }
+
+  async function getRepliesOnComment(){
+    let response = await axios.get('http://127.0.0.1:8000/api/comments/1/replies/')
+    console.log(response.data)
+  }
+  async function createReply(){
+    let response = await axios.post('http://127.0.0.1:8000/api/comments/1/replies/')
+    console.log(response.data)
   }
   return (
     <div>
