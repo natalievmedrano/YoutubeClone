@@ -13,8 +13,28 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import axios from "axios";
+
+
+
+
 
 function App() {
+
+
+  async function getCommentsForVideo(){
+    let response = await axios.get('http://127.0.0.1:8000/api/comments/video/aaa/');
+      console.log(`COMMENTS:`,response.data)
+    }
+
+  async function createComment(){
+    let response = await axios.post('http://127.0.0.1:8000/api/comments/');
+    console.log(response.data)
+  }
+
+  async function updateComment(){
+    let response = await axios.put('http://127.0.0.1:8000/api/comments/1/')
+  }
   return (
     <div>
       <Navbar />
