@@ -47,7 +47,7 @@ function App() {
     console.log(response.data)
   }
   return (
-    <div>
+    <div id="body">
       <Navbar />
       <Routes>
         <Route

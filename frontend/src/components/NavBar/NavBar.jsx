@@ -17,6 +17,7 @@ const Navbar = () => {
         </li>
         <li>
           <input type="search-bar" />
+          <a href="https://www.googleapis.com/youtube/v3/search?q={SEARCH QUERY HERE}&key={AIzaSyCj6vGRSUeWVDU1M19WLA2M6giN2hjWiVM} "> ?</a>
         </li>
         <li>
           {user ? (
