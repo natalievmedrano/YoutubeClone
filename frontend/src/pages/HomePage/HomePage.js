@@ -24,7 +24,7 @@ const HomePage = () => {
       }
     };
     fetchCars();
-  }, [token]);
+  }, [config]);
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
