@@ -1,39 +1,35 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 
 import axios from "axios";
+import SearchBar from "../../components/SearchBar/Searchbar";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const { user, config } = useAuth();
-  const [cars, setCars] = useState([]);
+  const [videos, setVideos] = useState([]);
 
-  useEffect(() => {
-    const fetchCars = async () => {
+
+    const fetchVideos = async (query) => {
       try {
         let response = await axios.get(
-          "http://127.0.0.1:8000/api/cars/",
-          config
+          `https://www.googleapis.com/youtube/v3/search?q=${query}&key=AIzaSyCj6vGRSUeWVDU1M19WLA2M6giN2hjWiVM&maxResults=15&part=snippet&type=video`
         );
-        setCars(response.data);
+        setVideos(response.data.items);
+        console.log(response.data.items)
       } catch (error) {
         console.log(error.response.data);
       }
     };
-    fetchCars();
-  }, [config]);
+    
   return (
     <div className="container">
+      <SearchBar fetchVideos={fetchVideos} setQuery={setVideos} />
       <h1>Home Page for {user.username}!</h1>
-      {cars &&
-        cars.map((car) => (
-          <p key={car.id}>
-            {car.year} {car.model} {car.make}
-          </p>
-        ))}
+
     </div>
   );
 };
