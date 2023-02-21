@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 const VideoPage = ({}) => {
-    const[video,setVideo]= useState(null);
+  const [video, setVideo] = useState(null);
 
   const { videoId } = useParams();
 
@@ -15,13 +15,15 @@ const VideoPage = ({}) => {
     setVideo(response.data.items[0]);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchVideo();
-  },[])
+  }, []);
+
+
 
   return (
     <div>
-      <VideoPlayer videoId={videoId} video={video} />
+      <VideoPlayer videoId={videoId} video={video}  />
     </div>
   );
 };
