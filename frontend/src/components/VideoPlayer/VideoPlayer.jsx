@@ -11,10 +11,6 @@ const VideoPlayer = ({ video, videoId,comments }) => {
         <h4>{video.snippet.title}</h4>
         <h2>DESCRIPTION</h2>
         <p id="description">{video.snippet.description}</p>
-        <div>
-          <h2>COMMENTS</h2>
-          <p><Comment/></p>
-        </div>
       </div>
     );
   }
