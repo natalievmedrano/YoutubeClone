@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import CommentForm from "../CommentForm/CommentForm";
+import './Comment.css'
 import axios from "axios";
 
 const Comment = ({ comment }) => {
   return (
-    <div>
+    <div className="comment">
       <h6>{comment.username}</h6>
       <p>{comment.text}</p>
     </div>

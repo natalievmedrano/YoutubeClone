@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Comment from "../Comment/Comment";
+import './CommentForm.css'
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 
@@ -45,7 +45,7 @@ const {config}= useAuth()
           value={text}
           onChange={(event) => setText(event.target.value)}
         />
-        <button type="submit">POST COMMENT</button>
+        <button type="submit" className="button">POST COMMENT</button>
       </div>
     </form>
   );
