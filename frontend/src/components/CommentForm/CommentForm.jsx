@@ -18,6 +18,7 @@ const {config}= useAuth()
             if (response.status === 201) {
                 await getCommentsForVideo();
             }
+            
         } catch (error) {
             console.error(response.data)
             

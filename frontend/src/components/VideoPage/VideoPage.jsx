@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentList from "../CommentList/CommentList";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
+import RelatedVideos from "../RelatedVideos/RelatedVideos";
 
 const VideoPage = ({}) => {
   const [video, setVideo] = useState(null);
@@ -34,6 +35,9 @@ const VideoPage = ({}) => {
   return (
     <div>
       <VideoPlayer videoId={videoId} video={video} />
+      <div>
+          <RelatedVideos videoId={videoId} setVideo={setVideo}/>
+        </div>
       <CommentForm getCommentsForVideo={getCommentsForVideo} videoId={videoId}/>
       <CommentList comments={comments}/>
     </div>

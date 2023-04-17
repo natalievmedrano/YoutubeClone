@@ -1,0 +1,21 @@
+.rec {
+    border: 1px groove black;
+    border-radius: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+}
+
+.relatedVideo {
+    border: 1px groove black;
+}
+
+p{
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.flex{
+    display: right;
+    justify-content: space-around;
+}

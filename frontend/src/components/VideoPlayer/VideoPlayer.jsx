@@ -1,5 +1,6 @@
 import React from "react";
 import './VideoPlayer.css'
+import RelatedVideos from "../RelatedVideos/RelatedVideos";
 
 const VideoPlayer = ({ video, videoId}) => {
   if (video) {
@@ -9,6 +10,7 @@ const VideoPlayer = ({ video, videoId}) => {
         <h4>{video.snippet.title}</h4>
         <p id="description">{video.snippet.description}</p>
       </div>
+      
     );
   }
   return null;

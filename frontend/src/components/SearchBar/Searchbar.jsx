@@ -14,7 +14,7 @@ const SearchBar = ({ fetchVideos }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="search" onChange={handleChange} value={query}></input>
+      <input type="search" onChange={handleChange} value={query} placeholder="search for videos"></input>
       <button type="submit">search</button>
     </form>
   );

@@ -28,6 +28,11 @@ button {
   padding: 0.5rem 0.5rem;
 }
 
+body{
+  background-color: darkgray;
+  text-decoration: none;
+}
+
 button:hover {
   cursor: pointer;
   color: white;
