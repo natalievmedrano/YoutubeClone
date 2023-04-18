@@ -35,11 +35,11 @@ const VideoPage = ({}) => {
   return (
     <div>
       <VideoPlayer videoId={videoId} video={video} />
+      <CommentForm getCommentsForVideo={getCommentsForVideo} videoId={videoId}/>
+      <CommentList comments={comments}/>
       <div>
           <RelatedVideos videoId={videoId} setVideo={setVideo}/>
         </div>
-      <CommentForm getCommentsForVideo={getCommentsForVideo} videoId={videoId}/>
-      <CommentList comments={comments}/>
     </div>
   );
 };

@@ -20,9 +20,10 @@ const RelatedVideos = ({ videoId }) => {
     <div className="rec">
       {relatedVideos.map((relatedVideo) => {
         let { url, width, height } = relatedVideo.snippet.thumbnails.default;
-
+        
         return (
           <div className="relatedVideo">
+            
             <Link
               className="flex"
               to={`/watch/${relatedVideo.id.videoId}`}

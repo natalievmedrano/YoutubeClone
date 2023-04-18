@@ -4,6 +4,8 @@
     margin-left: auto;
     margin-right: auto;
     color: black;
+    padding: 10px;
+    display: -ms-inline-grid;
 }
 
 .relatedVideo {

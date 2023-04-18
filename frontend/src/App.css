@@ -17,6 +17,10 @@ p {
   font-size: 10px;
   margin-left: auto;
 }
+iframe {
+  border: none;
+  overflow: hidden;
+}
 
 button {
   background-color: transparent;
