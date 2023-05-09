@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
 
 *,
 *::before,
@@ -10,7 +10,8 @@
 
 html {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
 }
 
 p {
@@ -23,9 +24,9 @@ iframe {
 }
 
 button {
-  background-color: transparent;
-  border: 2px solid steelblue;
-  color: steelblue;
+  background-color: gray;
+  border: 2px solid black;
+  color:  white;
   font-size: 1rem;
   font-family: inherit;
   max-width: 100px;
