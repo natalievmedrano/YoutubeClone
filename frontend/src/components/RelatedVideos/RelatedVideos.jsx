@@ -23,11 +23,13 @@ const RelatedVideos = ({ videoId }) => {
         
         return (
           <div className="relatedVideo">
+          
             
             <Link
               className="flex"
-              to={`/watch/${relatedVideo.id.videoId}`}
+              to={`/video/${relatedVideo.id.videoId}`}
             >
+
               <iframe width={width} height={height} src={url}></iframe>
               <p>{relatedVideo.snippet.title}</p>
             </Link>

@@ -6,6 +6,8 @@
     color: black;
     padding: 10px;
     display: -ms-inline-grid;
+    position: absolute;
+    justify-content: right;
 }
 
 .relatedVideo {
