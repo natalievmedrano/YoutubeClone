@@ -18,6 +18,7 @@ const RelatedVideos = ({ videoId }) => {
 
   return (
     <div className="rec">
+      <h2>Related Videos</h2>
       {relatedVideos.map((relatedVideo) => {
         let { url, width, height } = relatedVideo.snippet.thumbnails.default;
         

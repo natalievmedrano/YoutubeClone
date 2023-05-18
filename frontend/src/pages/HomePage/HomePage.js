@@ -5,6 +5,7 @@ import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import SearchBar from "../../components/SearchBar/Searchbar";
 import VideoLink from "../../components/VideoLink/VideoLink";
+import RecommendedVideos from "../../components/RecommendedVideos/ReccomendedVideos";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -31,6 +32,7 @@ const HomePage = () => {
     <div className="container">
       <SearchBar fetchVideos={fetchVideos} setQuery={setVideos} />
       {videoLinks} 
+      
 
     </div>
   );
