@@ -1,8 +1,5 @@
-A payment tracker application completed in a 12-day sprint that allows users to keep track of their payments per month.
-Technologies used: JavaScript, React.js, HTML, CSS, Python, Django REST Framework, MySQL, JSON web token.
+A paired-programming project that closely resembles the website YouTube completed in a 5-day sprint.
+Technologies used: JavaScript, React.js, HTML, CSS, Python, Django REST Framework, MySQL, YouTube API V3. 
 Application features include:
-●	Registration, login, and log out (authentication and JWT token )
-●	Sidebar that allows the user to keep track of their payments throughout the months or years.
-●	Search bar to display payments by month and if the payment was made, the due date, and the payment type.
-●	Color changing feature showing which payments have been paid.
-●	Chart displays data to keep track of how much the user is spending per month throughout the years.
+●	Registration, login, and log out. ( Authentication and JWT token )
+●	Search bar which allows the users to search for whatever keyword and display videos that contain that keyword in the title after clicking on whichever video the user would like the video, title, description, and comments are shown.  Ability for user to comment on a video as well as edit the comment.
